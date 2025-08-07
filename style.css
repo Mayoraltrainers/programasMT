@@ -74,6 +74,11 @@ body {
 .btn-lead:active {
   transform: translateY(0);
 }
+/* NUEVO: contenedor para el botón del Hero */
+.hero-cta {
+  margin-top: 1rem;
+  text-align: center;
+}
 
 
 /* Vídeo */

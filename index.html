@@ -42,13 +42,14 @@
     <div class="container">
       <h1>Alcanza tu máximo rendimiento físico y mental</h1>
       <p>Soy Daniel, Master Trainer y fundador de Mayoral Trainers.</p>
-      <form class="leadmagnet" aria-label="Formulario de descarga de guía">
-        <label for="lead-name" class="sr-only">Nombre</label>
-        <input id="lead-name" type="text" placeholder="Nombre" required>
-        <label for="lead-email" class="sr-only">Correo electrónico</label>
-        <input id="lead-email" type="email" placeholder="Email" required>
-        <button type="submit">Descarga tu Guía Gratuita</button>
-      </form>
+      <!-- CTA del Hero: solo hace scroll al Lead Magnet -->
+<div class="hero-cta">
+  <button type="button" class="btn-lead"
+    onclick="document.getElementById('leadmagnet').scrollIntoView({ behavior: 'smooth' })">
+    Quiero la guía
+  </button>
+</div>
+
     </div>
   </header>
 

@@ -21,8 +21,9 @@
   <meta name="twitter:description" content="Entrena, recupérate y rinde al máximo con planes personalizados de fitness y salud en Zaragoza">
   <meta name="twitter:image" content="assets/og-banner.jpeg.jpeg">
 
-  <!-- Hoja de estilos principal -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
   <!-- Calendly Inline Widget CSS -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
@@ -60,7 +61,7 @@
     <form id="download-form" class="leadmagnet-form">
       <input type="text" id="nombre" placeholder="Tu nombre" required>
       <input type="email" id="correo" placeholder="Tu correo electrónico" required>
-      
+
       <!-- Vídeo -->
       <div class="video-wrapper">
         <iframe id="videoLead" width="560" height="315"
@@ -86,7 +87,7 @@
     </form>
   </section>
 
-  <!-- 3. Vídeo -->
+  <!-- 3. Vídeo general -->
   <section id="video" class="container" aria-labelledby="video-title">
     <h2 id="video-title">Conócenos en Acción</h2>
     <div class="video-wrapper">
@@ -106,98 +107,105 @@
   </section>
 
   <!-- 5. Opiniones de clientes (carrusel) -->
-<section id="opiniones" class="container" aria-labelledby="opiniones-title">
-  <h2 id="opiniones-title">¿Qué opinan nuestros clientes?</h2>
+  <section id="opiniones" class="container" aria-labelledby="opiniones-title">
+    <h2 id="opiniones-title">¿Qué opinan nuestros clientes?</h2>
 
-  <div class="reviews-carousel" role="region" aria-label="Carrusel de reseñas">
-    <button class="rev-arrow" id="rev-prev" aria-label="Anterior">‹</button>
+    <div class="reviews-carousel" role="region" aria-label="Carrusel de reseñas">
+      <button class="rev-arrow" id="rev-prev" aria-label="Anterior">‹</button>
 
-    <div class="rev-viewport">
-      <div class="rev-track" id="rev-track">
-        <!-- Opinión 1 -->
-        <div class="rev-card">
-          <div class="rev-head">
-            <div class="rev-user">
-              <div class="rev-avatar">A</div>
-              <div>
-                <strong>Alicia Lizama</strong>
-                <div class="rev-date">Hace 5 meses</div>
+      <div class="rev-viewport">
+        <div class="rev-track" id="rev-track">
+
+          <!-- Opinión 1 -->
+          <article class="rev-card" aria-roledescription="slide">
+            <header class="rev-head">
+              <div class="rev-user">
+                <div class="rev-avatar">A</div>
+                <div>
+                  <strong>Alicia Lizama</strong>
+                  <div class="rev-date">Hace 5 meses</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="rev-stars">★★★★★</div>
-          <p>Un sitio estupendo para entrenar! Dani y Adrián hacen entrenamientos adaptados a las necesidades de cada uno, variados y entretenidos. Llevo ya 10 meses entrenando aquí y al poco tiempo ya noté que estaba ganando fuerza. Ahora me siento más fuerte que nunca y esto es sólo el principio!!</p>
-        </div>
+              <img class="rev-g-logo" src="assets/google-g.svg" alt="Google">
+            </header>
+            <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+            <p>Un sitio estupendo para entrenar! Dani y Adrián hacen entrenamientos adaptados a las necesidades de cada uno, variados y entretenidos. Llevo ya 10 meses entrenando aquí y al poco tiempo ya noté que estaba ganando fuerza. Ahora me siento más fuerte que nunca y esto es sólo el principio!!</p>
+          </article>
 
-        <!-- Opinión 2 -->
-        <div class="rev-card">
-          <div class="rev-head">
-            <div class="rev-user">
-              <div class="rev-avatar">E</div>
-              <div>
-                <strong>Esther Rando</strong>
-                <div class="rev-date">Hace 5 meses</div>
+          <!-- Opinión 2 -->
+          <article class="rev-card" aria-roledescription="slide">
+            <header class="rev-head">
+              <div class="rev-user">
+                <div class="rev-avatar">E</div>
+                <div>
+                  <strong>Esther Rando</strong>
+                  <div class="rev-date">Hace 5 meses</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="rev-stars">★★★★★</div>
-          <p>No puedo estar más satisfecha con mi experiencia en Mayoral Trainers. Sin duda, Daniel es el mejor entrenador que he tenido nunca. Acudí al servicio de entrenamiento personal, pues estoy en proceso de recuperación de una enfermedad, tras 3 años sin practicar nada de ejercicio y en una mala condición física. Por eso necesitaba un servicio totalmente personalizado, adaptado a mis capacidades y bien supervisado para no lesionarme. El servicio que presta el centro es inmejorable, con instalaciones cuidadas y un ambiente muy cercano. Lo recomiendo al 100%.</p>
-        </div>
+              <img class="rev-g-logo" src="assets/google-g.svg" alt="Google">
+            </header>
+            <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+            <p>No puedo estar más satisfecha con mi experiencia en Mayoral Trainers. Sin duda, Daniel es el mejor entrenador que he tenido nunca. Acudí al servicio de entrenamiento personal, pues estoy en proceso de recuperación de una enfermedad, tras 3 años sin practicar nada de ejercicio y en una mala condición física. Por eso necesitaba un servicio totalmente personalizado, adaptado a mis capacidades y bien supervisado para no lesionarme. El servicio que presta el centro es inmejorable, con instalaciones cuidadas y un ambiente muy cercano. Lo recomiendo al 100%.</p>
+          </article>
 
-        <!-- Opinión 3 -->
-        <div class="rev-card">
-          <div class="rev-head">
-            <div class="rev-user">
-              <div class="rev-avatar">C</div>
-              <div>
-                <strong>Chus Perez</strong>
-                <div class="rev-date">Hace 11 meses</div>
+          <!-- Opinión 3 -->
+          <article class="rev-card" aria-roledescription="slide">
+            <header class="rev-head">
+              <div class="rev-user">
+                <div class="rev-avatar">C</div>
+                <div>
+                  <strong>Chus Perez</strong>
+                  <div class="rev-date">Hace 11 meses</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="rev-stars">★★★★★</div>
-          <p>Este sitio es maravilloso, entrenar allí es una gozada. Ambiente muy cercano y familiar y Dani se preocupa mucho porque hagamos los ejercicios correctamente sin hacernos daño, no soy un número más como pasa en otros centros más grandes, además de que conoce perfectamente nuestras dolencias 😉, que desde que entreno son muchas menos. Un 10, no... un 11!!</p>
-        </div>
+              <img class="rev-g-logo" src="assets/google-g.svg" alt="Google">
+            </header>
+            <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+            <p>Este sitio es maravilloso, entrenar allí es una gozada. Ambiente muy cercano y familiar y Dani se preocupa mucho porque hagamos los ejercicios correctamente sin hacernos daño, no soy un número más como pasa en otros centros más grandes, además de que conoce perfectamente nuestras dolencias 😉, que desde que entreno son muchas menos. Un 10, no... un 11!!</p>
+          </article>
 
-        <!-- Opinión 4 -->
-        <div class="rev-card">
-          <div class="rev-head">
-            <div class="rev-user">
-              <div class="rev-avatar">S</div>
-              <div>
-                <strong>Sofia Charlez</strong>
-                <div class="rev-date">Hace 1 año</div>
+          <!-- Opinión 4 -->
+          <article class="rev-card" aria-roledescription="slide">
+            <header class="rev-head">
+              <div class="rev-user">
+                <div class="rev-avatar">S</div>
+                <div>
+                  <strong>Sofia Charlez</strong>
+                  <div class="rev-date">Hace 1 año</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="rev-stars">★★★★★</div>
-          <p>Después de mucho tiempo con pocas ganas de cuidarme, me decidí a probar con Dani ya que me habían hablado muy bien de él. Ya llevo mes y medio y tengo que decir que no solo lo noto físicamente sino que voy muy motivada porque me ayuda a desconectar y sentirme mejor anímicamente. Vengo de tener hernias en el cuello y espalda además de fibromialgia y desde que voy no tengo apenas dolores en el cuerpo y he bajado 6 kilos. Muchas gracias Dani, el lunes nos vemos 😊</p>
-        </div>
+              <img class="rev-g-logo" src="assets/google-g.svg" alt="Google">
+            </header>
+            <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+            <p>Después de mucho tiempo con pocas ganas de cuidarme, me decidí a probar con Dani ya que me habían hablado muy bien de él. Ya llevo mes y medio y tengo que decir que no solo lo noto físicamente sino que voy muy motivada porque me ayuda a desconectar y sentirme mejor anímicamente. Vengo de tener hernias en el cuello y espalda además de fibromialgia y desde que voy no tengo apenas dolores en el cuerpo y he bajado 6 kilos. Muchas gracias Dani, el lunes nos vemos 😊</p>
+          </article>
 
-        <!-- Opinión 5 -->
-        <div class="rev-card">
-          <div class="rev-head">
-            <div class="rev-user">
-              <div class="rev-avatar">E</div>
-              <div>
-                <strong>Eva</strong>
-                <div class="rev-date">Hace 5 meses</div>
+          <!-- Opinión 5 -->
+          <article class="rev-card" aria-roledescription="slide">
+            <header class="rev-head">
+              <div class="rev-user">
+                <div class="rev-avatar">E</div>
+                <div>
+                  <strong>Eva</strong>
+                  <div class="rev-date">Hace 5 meses</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="rev-stars">★★★★★</div>
-          <p>Conocí a Dani como masajista y por su trato y profesionalidad me animé a empezar con él como entrenador personal. Estoy operada de una hernia discal y tengo que ir con mucho cuidado, sin embargo con Dani llevo 4 meses entrenando y 0 dolor!!! Me corrige posiciones y adapta los ejercicios. En poco tiempo estoy viendo cambios importantes en mi físico. Los entrenamientos son duros pero muy dinámicos y entretenidos así que merece la pena el esfuerzo!!. Muchísimas gracias Dani por tu implicación y ganas, eres muy buen profesional y una gran persona, ya estoy deseando ver y empezar en tu nuevo centro!!!</p>
+              <img class="rev-g-logo" src="assets/google-g.svg" alt="Google">
+            </header>
+            <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+            <p>Conocí a Dani como masajista y por su trato y profesionalidad me animé a empezar con él como entrenador personal. Estoy operada de una hernia discal y tengo que ir con mucho cuidado, sin embargo con Dani llevo 4 meses entrenando y 0 dolor!!! Me corrige posiciones y adapta los ejercicios. En poco tiempo estoy viendo cambios importantes en mi físico. Los entrenamientos son duros pero muy dinámicos y entretenidos así que merece la pena el esfuerzo!!. Muchísimas gracias Dani por tu implicación y ganas, eres muy buen profesional y una gran persona, ya estoy deseando ver y empezar en tu nuevo centro!!!</p>
+          </article>
+
+          <!-- 👉 Añade aquí el resto de opiniones repitiendo el <article class="rev-card">... -->
+
         </div>
-
-        <!-- Aquí seguirías añadiendo todas las demás opiniones usando el mismo formato -->
-
       </div>
-    </div>
-    <button class="rev-arrow" id="rev-next">&#10095;</button>
-  </div>
-  <div class="rev-indicator" id="rev-indicator"></div>
-</section>
 
+      <button class="rev-arrow" id="rev-next" aria-label="Siguiente">›</button>
+    </div>
+
+    <div class="rev-indicator" id="rev-indicator">1 / 5</div>
+  </section>
 
   <!-- 6. Planes y Precios -->
   <section id="planes" class="container" aria-labelledby="planes-title">
@@ -242,8 +250,10 @@
     </div>
   </section>
 
-  <!-- Scripts finales -->
+  <!-- Scripts externos -->
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+  <!-- Lógica: habilitar descarga tras ver vídeo + datos -->
   <script>
     let nombreInput = document.getElementById('nombre');
     let correoInput = document.getElementById('correo');
@@ -293,8 +303,10 @@
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat de WhatsApp">
     <img src="assets/whatsapp-icon.svg" alt="WhatsApp">
   </a>
-<script>
-  (function () {
+
+  <!-- Carrusel de Opiniones: único script (manual + auto) -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById('rev-track');
     const prevBtn = document.getElementById('rev-prev');
     const nextBtn = document.getElementById('rev-next');
@@ -303,99 +315,42 @@
     const total = cards.length;
 
     let index = 0;
+    let autoTimer = null;
 
     function update() {
       track.style.transform = `translateX(-${index * 100}%)`;
       if (indicator) indicator.textContent = `${index + 1} / ${total}`;
     }
+    function next() { index = (index + 1) % total; update(); }
+    function prev() { index = (index - 1 + total) % total; update(); }
+    function startAuto() { stopAuto(); autoTimer = setInterval(next, 5000); }
+    function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
 
-    // Flechas
-    prevBtn.addEventListener('click', () => {
-      index = (index - 1 + total) % total;
-      update();
-    });
-    nextBtn.addEventListener('click', () => {
-      index = (index + 1) % total;
-      update();
-    });
+    prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    nextBtn.addEventListener('click', () => { next(); startAuto(); });
 
-    // Swipe táctil en móviles
+    // Pausa al pasar el ratón
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    // Swipe móvil
     let startX = 0;
-    track.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-    }, { passive: true });
-
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
     track.addEventListener('touchend', e => {
       const dx = e.changedTouches[0].clientX - startX;
-      if (Math.abs(dx) > 40) {
-        index = dx < 0 ? (index + 1) % total : (index - 1 + total) % total;
-        update();
-      }
-    }, { passive: true });
+      if (Math.abs(dx) > 40) (dx < 0 ? next() : prev());
+    }, {passive:true});
 
-    // Teclado (accesibilidad)
+    // Teclado
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') { index = (index + 1) % total; update(); }
-      if (e.key === 'ArrowLeft')  { index = (index - 1 + total) % total; update(); }
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft')  prev();
     });
 
     update();
-  })();
-</script>
-<script>
-// ===== Carrusel de Opiniones con auto avance =====
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".rev-track");
-  const cards = document.querySelectorAll(".rev-card");
-  const prevBtn = document.querySelector(".rev-prev");
-  const nextBtn = document.querySelector(".rev-next");
-  const total = cards.length;
-  const indicator = document.querySelector(".rev-indicator");
-  let index = 0;
-  let autoSlideInterval;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-    indicator.textContent = `${index + 1} / ${total}`;
-  }
-
-  function nextReview() {
-    index = (index + 1) % total;
-    updateCarousel();
-  }
-
-  function prevReview() {
-    index = (index - 1 + total) % total;
-    updateCarousel();
-  }
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(nextReview, 5000); // cada 5s
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
-
-  nextBtn.addEventListener("click", () => {
-    nextReview();
-    stopAutoSlide();
-    startAutoSlide();
+    startAuto();
   });
-
-  prevBtn.addEventListener("click", () => {
-    prevReview();
-    stopAutoSlide();
-    startAutoSlide();
-  });
-
-  track.addEventListener("mouseenter", stopAutoSlide);
-  track.addEventListener("mouseleave", startAutoSlide);
-
-  updateCarousel();
-  startAutoSlide();
-});
-</script>
+  </script>
 
 </body>
 </html>

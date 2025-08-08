@@ -294,3 +294,11 @@ body {
     padding: 1rem;
   }
 }
+#download-btn[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+#download-btn[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}

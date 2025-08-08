@@ -58,13 +58,31 @@
   <h2 id="leadmagnet-title">Consigue el cuerpo de tus sueños en solo 8 semanas</h2>
   <p>Guía de inicio para perder peso y transformarte física y mentalmente.</p>
 
-  <!-- Botón de descarga -->
-  <div class="leadmagnet-cta">
-    <a href="assets/guia-inicio.pdf" class="btn-lead" download>
-      Descargar guía gratuita
-    </a>
-  </div>
+  <!-- Formulario -->
+  <form id="download-form" class="leadmagnet-form">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="email" id="correo" placeholder="Tu correo electrónico" required>
+    
+    <!-- Vídeo -->
+    <div class="video-wrapper">
+      <iframe id="video" width="560" height="315"
+        src="https://www.youtube.com/embed/I59_qI9mzZY?enablejsapi=1"
+        title="Video de presentación"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Botón de descarga -->
+    <div class="leadmagnet-cta">
+      <a id="download-btn" href="assets/guia-inicio.pdf" class="btn-lead" download disabled>
+        Descargar guía gratuita
+      </a>
+    </div>
+  </form>
 </section>
+
 
 
 
@@ -228,6 +246,52 @@
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat de WhatsApp">
     <img src="assets/whatsapp-icon.svg" alt="WhatsApp">
   </a>
+
+<script>
+  let nombreInput = document.getElementById('nombre');
+  let correoInput = document.getElementById('correo');
+  let downloadBtn = document.getElementById('download-btn');
+  let datosCompletos = false;
+  let videoVisto = false;
+
+  // Comprobar si los datos están completos
+  function checkDatos() {
+    datosCompletos = nombreInput.value.trim() !== '' && correoInput.validity.valid;
+    checkActivarBoton();
+  }
+
+  // Activar API de YouTube
+  function onYouTubeIframeAPIReady() {
+    let player = new YT.Player('video', {
+      events: {
+        'onStateChange': function (event) {
+          if (event.data === YT.PlayerState.ENDED) {
+            videoVisto = true;
+            checkActivarBoton();
+          }
+        }
+      }
+    });
+  }
+
+  // Comprobar si se activa el botón
+  function checkActivarBoton() {
+    if (datosCompletos && videoVisto) {
+      downloadBtn.removeAttribute('disabled');
+      downloadBtn.style.opacity = '1';
+      downloadBtn.style.pointerEvents = 'auto';
+    }
+  }
+
+  // Listeners de inputs
+  nombreInput.addEventListener('input', checkDatos);
+  correoInput.addEventListener('input', checkDatos);
+
+  // Cargar API de YouTube
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+</script>
 
 </body>
 </html>

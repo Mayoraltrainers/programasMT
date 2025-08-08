@@ -296,3 +296,27 @@ body {
   .reviews-carousel { padding: .75rem; }
   .rev-card { padding: .9rem; }
 }
+/* Leer más / Ocultar en reseñas */
+.rev-text-toggle {
+  color: #1a73e8;           /* azul tipo Google */
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: .35rem;
+}
+.rev-text-toggle:hover { text-decoration: underline; }
+
+/* opcional: un degradado sutil cuando está “cortado” */
+.rev-truncated {
+  position: relative;
+}
+.rev-truncated::after {
+  content: "";
+  position: absolute;
+  right: 0; bottom: 0; left: 0;
+  height: 1.8em;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 90%);
+  border-radius: 0 0 12px 12px; /* coincide con .rev-card */
+  pointer-events: none;
+}

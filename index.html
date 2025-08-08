@@ -377,6 +377,66 @@
     startAuto();
   });
   </script>
+<script>
+/**
+ * “Leer más / Ocultar” automático para reseñas largas
+ * No necesitas cambiar el HTML de cada tarjeta.
+ * Trabaja sobre el <p> dentro de .rev-card (el texto de la opinión).
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const LIMITE = 260; // <- ajusta el número de caracteres visibles
+
+  // Encuentra todos los párrafos de texto de reseña
+  const reviewParas = document.querySelectorAll('.rev-card p');
+
+  reviewParas.forEach(p => {
+    // Evita procesar párrafos que ya tengan toggle
+    if (p.dataset.toggleReady === '1') return;
+
+    const fullText = p.textContent.trim();
+    if (fullText.length <= LIMITE) return; // si es corta, no hacemos nada
+
+    // Corta por palabra, no a mitad
+    let cut = fullText.slice(0, LIMITE);
+    const lastSpace = cut.lastIndexOf(' ');
+    if (lastSpace > LIMITE * 0.6) cut = cut.slice(0, lastSpace);
+
+    // Construye el contenido: corto + completo + botón
+    const shortSpan = document.createElement('span');
+    shortSpan.className = 'rev-short rev-truncated';
+    shortSpan.textContent = cut + '…';
+
+    const fullSpan = document.createElement('span');
+    fullSpan.className = 'rev-full';
+    fullSpan.style.display = 'none';
+    fullSpan.textContent = fullText;
+
+    const toggle = document.createElement('a');
+    toggle.href = '#';
+    toggle.className = 'rev-text-toggle';
+    toggle.textContent = 'Leer más';
+
+    // Limpia y monta
+    p.innerHTML = '';
+    p.appendChild(shortSpan);
+    p.appendChild(fullSpan);
+    p.appendChild(document.createElement('br'));
+    p.appendChild(toggle);
+
+    // Marca como procesado
+    p.dataset.toggleReady = '1';
+
+    // Listener del botón
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      const isOpening = fullSpan.style.display === 'none';
+      fullSpan.style.display = isOpening ? 'inline' : 'none';
+      shortSpan.style.display = isOpening ? 'none' : 'inline';
+      toggle.textContent = isOpening ? 'Ocultar' : 'Leer más';
+    });
+  });
+});
+</script>
 
 </body>
 </html>

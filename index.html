@@ -342,6 +342,60 @@
     update();
   })();
 </script>
+<script>
+// ===== Carrusel de Opiniones con auto avance =====
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".rev-track");
+  const cards = document.querySelectorAll(".rev-card");
+  const prevBtn = document.querySelector(".rev-prev");
+  const nextBtn = document.querySelector(".rev-next");
+  const total = cards.length;
+  const indicator = document.querySelector(".rev-indicator");
+  let index = 0;
+  let autoSlideInterval;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    indicator.textContent = `${index + 1} / ${total}`;
+  }
+
+  function nextReview() {
+    index = (index + 1) % total;
+    updateCarousel();
+  }
+
+  function prevReview() {
+    index = (index - 1 + total) % total;
+    updateCarousel();
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextReview, 5000); // cada 5s
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextReview();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevReview();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  track.addEventListener("mouseenter", stopAutoSlide);
+  track.addEventListener("mouseleave", startAutoSlide);
+
+  updateCarousel();
+  startAutoSlide();
+});
+</script>
 
 </body>
 </html>

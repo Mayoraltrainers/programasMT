@@ -31,8 +31,8 @@ body {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #111; /* Cambiado de blanco a gris oscuro */
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Contraste suave */
+  color: #111;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
 }
 .hero p {
   margin-bottom: 2rem;
@@ -60,7 +60,7 @@ body {
 .btn-lead {
   display: inline-block;
   padding: 0.75rem 1.25rem;
-  background: #e63946;   /* Rojo MT */
+  background: #e63946;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -76,7 +76,7 @@ body {
   text-align: center;
 }
 
-/* Vídeo responsive (YouTube y HTML5) */
+/* Vídeo responsive */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -155,117 +155,20 @@ body {
 }
 #mapa h2 { text-align: center; margin-bottom: 1rem; }
 
-/* --- Estado deshabilitado del botón de descarga --- */
+/* Estado deshabilitado del botón de descarga */
 #download-btn[disabled] {
   opacity: 0.5;
   pointer-events: none;
 }
 
 /* ===== Carrusel de Opiniones ===== */
-#opiniones h2 {
-  text-align: center;
-  margin-bottom: 0.75rem;
-}
-
-.reviews-carousel {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 0.75rem;
-  background: #f3f3f3;
-  border-radius: 14px;
-  padding: 1rem;
-}
-
-.rev-arrow {
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 6px 16px rgba(0,0,0,.12);
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: transform .08s ease, opacity .2s ease;
-}
-.rev-arrow:hover { transform: translateY(-1px); }
-.rev-arrow:active { transform: translateY(0); }
-
-.rev-viewport { overflow: hidden; border-radius: 12px; }
-
-.rev-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%; /* una tarjeta por pantalla */
-  transition: transform .35s ease-in-out;
-}
-
-.rev-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  padding: 1rem 1.1rem;
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.rev-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: .35rem;
-}
-
-.rev-user { display: flex; align-items: center; gap: .6rem; }
-.rev-avatar {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: #457b9d; color:#fff; display:flex; align-items:center; justify-content:center;
-  font-weight: 700;
-}
-.rev-date { font-size: .8rem; color:#777; }
-.rev-g-logo { width: 20px; height: 20px; opacity: .9; }
-
-.rev-stars {
-  color: #f4b400; /* dorado tipo Google */
-  letter-spacing: 2px;
-  margin: .25rem 0 .4rem;
-  font-size: 1.05rem;
-}
-
-.rev-indicator {
-  text-align: center;
-  margin-top: .5rem;
-  color:#666;
-  font-size: .9rem;
-}
-
-/* Responsive */
-@media (min-width: 900px) {
-  .rev-track { grid-auto-columns: 70%; } /* un poco más estrecha en desktop */
-}
-@media (max-width: 768px) {
-  .container { padding: 1rem; }
-  .hero { padding: 2rem 0; min-height: auto; }
-  .hero h1 { font-size: 2rem; }
-  .leadmagnet input { width: 100%; max-width: 280px; }
-  .btn-lead { width: auto; }
-  .plans { flex-direction: column; }
-  .plan { width: 100%; }
-  .map-container iframe { height: 300px; }
-}
-@media (max-width: 480px) {
-  .plan { padding: 1rem; }
-  .plan .price { font-size: 1.25rem; }
-  .hero h1 { font-size: 1.75rem; }
-  .hero p { font-size: 0.95rem; }
-}
-/* ===== Mejoras visuales para carrusel de opiniones ===== */
 #opiniones {
   margin: 3rem auto;
   max-width: 900px;
+}
+#opiniones h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .reviews-carousel {
@@ -311,7 +214,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
   padding: 1.2rem;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -356,7 +258,7 @@ body {
 }
 
 .rev-stars {
-  color: #f4b400; /* dorado tipo Google */
+  color: #f4b400;
   letter-spacing: 1px;
   margin: .25rem 0 .4rem;
   font-size: 1rem;
@@ -366,8 +268,6 @@ body {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #444;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .rev-indicator {
@@ -378,10 +278,21 @@ body {
 }
 
 /* Responsive */
-@media (min-width: 900px) {
-  .rev-track { grid-auto-columns: 70%; }
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  .hero { padding: 2rem 0; min-height: auto; }
+  .hero h1 { font-size: 2rem; }
+  .leadmagnet input { width: 100%; max-width: 280px; }
+  .btn-lead { width: auto; }
+  .plans { flex-direction: column; }
+  .plan { width: 100%; }
+  .map-container iframe { height: 300px; }
 }
 @media (max-width: 480px) {
+  .plan { padding: 1rem; }
+  .plan .price { font-size: 1.25rem; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero p { font-size: 0.95rem; }
   .reviews-carousel { padding: .75rem; }
   .rev-card { padding: .9rem; }
 }

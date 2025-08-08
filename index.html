@@ -105,11 +105,71 @@
     </div>
   </section>
 
-  <!-- 5. Testimonios -->
-  <section id="testimonios" class="container interactive-testimonials" aria-labelledby="testimonios-title">
-    <h2 id="testimonios-title">Lo que dicen nuestros clientes</h2>
-    <!-- Contenido de testimonios aquí -->
-  </section>
+  <!-- 5. Opiniones de clientes (carrusel) -->
+<section id="opiniones" class="container" aria-labelledby="opiniones-title">
+  <h2 id="opiniones-title">¿Qué opinan nuestros clientes?</h2>
+
+  <div class="reviews-carousel" role="region" aria-label="Carrusel de reseñas">
+    <button class="rev-arrow" id="rev-prev" aria-label="Anterior">‹</button>
+
+    <div class="rev-viewport">
+      <div class="rev-track" id="rev-track">
+        <!-- Tarjeta 1 -->
+        <article class="rev-card" aria-roledescription="slide">
+          <header class="rev-head">
+            <div class="rev-user">
+              <div class="rev-avatar">A</div>
+              <div>
+                <strong>Aor–aiya Wan</strong>
+                <div class="rev-date">2023-07-07</div>
+              </div>
+            </div>
+            <img class="rev-g-logo" src="https://www.gstatic.com/images/branding/product/1x/google_g_64dp.png" alt="Google" />
+          </header>
+          <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+          <p>Todo ha sido excelente.</p>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="rev-card" aria-roledescription="slide">
+          <header class="rev-head">
+            <div class="rev-user">
+              <div class="rev-avatar">S</div>
+              <div>
+                <strong>Salim Laaraj</strong>
+                <div class="rev-date">2023-07-07</div>
+              </div>
+            </div>
+            <img class="rev-g-logo" src="https://www.gstatic.com/images/branding/product/1x/google_g_64dp.png" alt="Google" />
+          </header>
+          <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+          <p>Excelente trato !!!</p>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="rev-card" aria-roledescription="slide">
+          <header class="rev-head">
+            <div class="rev-user">
+              <div class="rev-avatar">O</div>
+              <div>
+                <strong>Odalis Milena</strong>
+                <div class="rev-date">2023-07-07</div>
+              </div>
+            </div>
+            <img class="rev-g-logo" src="https://www.gstatic.com/images/branding/product/1x/google_g_64dp.png" alt="Google" />
+          </header>
+          <div class="rev-stars" aria-label="5 de 5">★★★★★</div>
+          <p>Excelente servicio. Muy rápido todo y la atención súper bien. ¡Estoy encantada!</p>
+        </article>
+      </div>
+    </div>
+
+    <button class="rev-arrow" id="rev-next" aria-label="Siguiente">›</button>
+  </div>
+
+  <div class="rev-indicator" id="rev-indicator" aria-hidden="true">1 / 3</div>
+</section>
+
 
   <!-- 6. Planes y Precios -->
   <section id="planes" class="container" aria-labelledby="planes-title">

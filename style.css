@@ -302,3 +302,96 @@ body {
   opacity: 0.5;
   pointer-events: none;
 }
+/* ===== Carrusel de Opiniones ===== */
+#opiniones h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.reviews-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f3f3f3;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.rev-arrow {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .08s ease, opacity .2s ease;
+}
+.rev-arrow:hover { transform: translateY(-1px); }
+.rev-arrow:active { transform: translateY(0); }
+
+.rev-viewport {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.rev-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  /* una tarjeta por pantalla */
+  transition: transform .35s ease-in-out;
+}
+
+.rev-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  padding: 1rem 1.1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rev-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .35rem;
+}
+
+.rev-user { display: flex; align-items: center; gap: .6rem; }
+.rev-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #457b9d; color:#fff; display:flex; align-items:center; justify-content:center;
+  font-weight: 700;
+}
+.rev-date { font-size: .8rem; color:#777; }
+.rev-g-logo { width: 20px; height: 20px; opacity: .9; }
+
+.rev-stars {
+  color: #f4b400; /* dorado tipo Google */
+  letter-spacing: 2px;
+  margin: .25rem 0 .4rem;
+  font-size: 1.05rem;
+}
+
+.rev-indicator {
+  text-align: center;
+  margin-top: .5rem;
+  color:#666;
+  font-size: .9rem;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .rev-track { grid-auto-columns: 70%; } /* un poco más estrecha en desktop */
+}
+@media (max-width: 480px) {
+  .reviews-carousel { padding: .75rem; }
+  .rev-card { padding: .9rem; }
+}

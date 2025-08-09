@@ -366,3 +366,20 @@ body {
   font-size: 0.95rem;
   color: #555;
 }
+/* FAQ */
+#faq details {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+#faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  list-style: none;
+}
+#faq summary::-webkit-details-marker { display: none; }
+#faq details[open] summary { color: #e63946; }
+#faq p { margin-top: 0.5rem; color: #555; }

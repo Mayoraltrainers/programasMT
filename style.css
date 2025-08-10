@@ -383,3 +383,84 @@ body {
 #faq summary::-webkit-details-marker { display: none; }
 #faq details[open] summary { color: #e63946; }
 #faq p { margin-top: 0.5rem; color: #555; }
+/* CTA Final en formato tarjeta */
+.cta-final-card {
+  background: #f8f8f8;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.cta-text {
+  flex: 1;
+  padding: 2rem;
+}
+
+.cta-text h2 {
+  color: #e63946;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.cta-button {
+  background: #e63946;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #c72d38;
+}
+
+.cta-garantia {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.cta-image {
+  flex: 1;
+}
+
+.cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .cta-card {
+    flex-direction: column;
+  }
+}

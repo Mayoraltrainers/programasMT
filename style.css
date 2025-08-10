@@ -383,3 +383,139 @@ body {
 #faq summary::-webkit-details-marker { display: none; }
 #faq details[open] summary { color: #e63946; }
 #faq p { margin-top: 0.5rem; color: #555; }
+
+/* ===== Sobre mí ===== */
+.sobre-mi h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.sobre-mi-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre-mi-foto {
+  margin: 0;
+  position: relative;
+}
+
+.sobre-mi-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+  object-fit: cover;
+}
+
+.sobre-mi-texto {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,.08);
+}
+
+.sobre-mi-nombre {
+  font-size: 1.6rem;
+  margin: 0 0 .25rem 0;
+}
+
+.sobre-mi-cargo {
+  color: #457b9d;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sobre-mi-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .5rem .75rem;
+  list-style: none;
+  margin: 1rem 0 1.25rem 0;
+  padding: 0;
+}
+
+.sobre-mi-badges li {
+  background: #f6f8fb;
+  border: 1px solid #e9eef5;
+  border-radius: 999px;
+  padding: .45rem .75rem;
+  font-size: .95rem;
+}
+
+.sobre-mi-datos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .75rem;
+  margin: 1rem 0 1.25rem 0;
+}
+
+.sobre-mi-datos .dato {
+  background: #f9fafb;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  padding: .75rem;
+  text-align: center;
+}
+
+.dato-num {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f2937;
+  line-height: 1.1;
+}
+
+.dato-txt {
+  display: block;
+  font-size: .9rem;
+  color: #6b7280;
+  margin-top: .15rem;
+}
+
+/* Botones sociales */
+.sobre-mi-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.sm-btn {
+  display: inline-block;
+  padding: .55rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.sm-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+.sm-btn.primario {
+  background: #e63946;
+  color: #fff;
+  border-color: #e63946;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sobre-mi-grid {
+    grid-template-columns: 1fr;
+  }
+  .sobre-mi-foto {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .sobre-mi-badges {
+    grid-template-columns: 1fr;
+  }
+}
